@@ -1,0 +1,1 @@
+window.alert('Clique na opção "Demo" para abrir a visão modelo de Dashboard')

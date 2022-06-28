@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="static/nova_despesa.css">
+    <!-- ícone da aba -->
+    <link rel="icon" type="image/x-icon" href="assets/iconed.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- javascript -->
+    <script src="js/functions.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Despesa</title>
+</head>
+
+<body class="despesa">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" >🌠 Avenir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-link">
+                        <a href="nova_despesa.html" ><input type="button" class="btn-warning btn-sm" name="new-question" value="Novo Gasto"></a>
+                    </li>
+                    <li class="nav-item nav-link">
+                        <a href="#" ><input disabled type="button" class="btn-primary btn-sm" name="new-income" value="Nova Receita"></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Preferências</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Configurações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form id="form_despesa" accept-charset="utf-8" action="" method="POST">
+        <label for="switch_fixa">Despesa Fixa?</label>
+        <label class="switch" id="switch_fixa">
+            <input type="checkbox" >
+            <span class="slider round"></span>
+        </label>
+        <br>
+        <div class=" container categoria-conjunto">
+            <label class="control-label" for="categoria">Qual a categoria desta despesa?</label>
+            <div class="row campo-categoria">
+                <div class="col-sm-10">
+                    <input list="categorias" name="categoria" class="form-control" id="email" />
+                    <datalist id="categorias">
+                        <option value="aluguel">Aluguel</option>
+                        <option value="mantimentos">Mantimentos</option>
+                        <option value="comer_fora">Comer Fora</option>
+                        <option value="cosmeticos">Cosméticos</option>
+                        <option value="gasolina">Gasolina</option>
+                        <option value="ensino">Ensino</option>
+                    </datalist>            
+                </div>
+                <input type="button" value="+" name="add_categoria" class="container col-sm-2 btn btn-light">
+            </div>
+        </div>
+
+        <div class="controle-data container">
+            <div class="texto-info">
+                <label type="text">Data: </label>
+                <label type="text" name="dt_despesa" id="dt_despesa"></label>
+            </div>
+            <div class="data-buttons">
+                <input type="button" value="Hoje" name="hoje" class="btn btn-dark col-sm-3" onclick="setDataHoje()">
+                <input type="button" value="Ontem" name="ontem" class="btn btn-dark col-sm-3" onclick="setDataOntem()">
+                <input type="button" value="Escolher" name="escolher" class="btn btn-dark col-sm-3" onclick="setDataEscolher()">
+            </div>
+        </div>
+
+        <div class="container">            
+                <label for="nome">Nome (Opcional):</label>            
+            <div class="">
+                <input type="text" name="nome" id="nome" alt="Nome opcional da despesa" class="form-control">
+            </div>
+        </div>
+        <div class="container">            
+            <label for="titulo">Valor:</label>            
+            <div class="">
+                <input type="number" name="valor" id="valor" alt="Valor numérico da despesa" class="form-control">
+            </div>
+        </div>
+        <div class="container">            
+            <label for="descricao_despesa">Descrição (Opcional):</label>            
+            <input type="textarea" name="descricao_despesa" id="descricao_despesa" alt="Campo livre para descrição ou observação" class="form-control">
+        </div>
+
+        <div class="manipular-form">
+            <div class="row botoes">
+                <button type="submit" name="enviar_despesa" class="container btn btn-primary col-sm-3">Adicionar Despesa</button><br>
+                <button type="submit" name="enviar_despesa" class="container btn btn-primary col-sm-3">Adicionar Despesa e Voltar</button><br>
+                <button type="button" name="enviar_despesa" class="container btn btn-primary col-sm-3" onclick="voltarDashboard()">Cancelar</button>
+            </div>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

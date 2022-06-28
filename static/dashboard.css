@@ -1,0 +1,60 @@
+.titulo_pagina {
+   position: relative;
+   margin-top: 2em;
+   margin-bottom: 1em;
+}
+
+.dashboard{
+    background-image: linear-gradient(to right, indigo, violet);
+}
+
+.isactive:hover {
+    color: rgb(246, 197, 39) !important;
+}
+
+img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+}
+
+.gasto-vermelho{
+    color: crimson;
+}
+
+.renda-verde{
+    color: rgb(53, 216, 28)
+}
+
+body > div > div.col-lg-12 > div > div.col-lg-4 > div > div > p{
+    margin-bottom: 0;
+}
+
+.porcentagem-alcancada, .porcentagem-alcancada{
+    margin-bottom: 1.5em;
+}
+
+/* barras de progresso: */
+progress::-webkit-progress-bar {background-color: rgb(195, 195, 195); width: 100%;}
+progress {background-color: black;}
+
+/* valores: */
+progress::-webkit-progress-value {background-color: black !important;}
+progress::-moz-progress-bar {background-color: black !important;}
+progress {color: green;}
+progress{
+    width: 100%;
+}
+
+.um-relatorio{
+    margin: 0.5em;
+}
+.novo-relatorio{
+    margin-top: 1em;
+    float: right;
+}
+
+.add-widget-btn{
+    width: 100%;
+}
