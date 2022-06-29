@@ -18,13 +18,20 @@ Padrões são importantes. O sistema deve possuir uma identidade visual única (
 Para desenvolver, você pode utilizar uma IDE como Sublime Text, Atom ou o VS Code, ferramentas mais leves que o Eclipse (que será essencial com a orientação a objetos e Java, mas, no momento, pode parecer “um canhão para matar uma mosca”). Fica a seu critério.
 Utilize a estrutura de pastas para se organizar, faça um pacote ZIP contendo todos os arquivos do seu projeto: .html, .css etc. (necessários para o Bootstrap) e nos entregue. 
 
-____________________________________________________________________________________________________________________
 
-Algumas Telas do Primeiro Commit
+# Telas do Primeiro Commit (Projeto Site Avenir)
 
 ### Login
+Mobile
+
+![Login Mobile](https://github.com/cgodevs/fiap-projeto-site/blob/main/assets/login_mobile.jpeg?raw=true)
 
 ### Dashboard
+Desktop
+
+![Desktop Dash](https://github.com/cgodevs/fiap-projeto-site/blob/main/assets/dashboard_desktop.jpeg?raw=true)
 
 ### Nova Despesa
+Mobile
 
+![Desktop Mobile](https://github.com/cgodevs/fiap-projeto-site/blob/main/assets/despesa_mobile.jpeg?raw=true)
